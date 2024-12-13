@@ -12,6 +12,8 @@ class RepositoryCreation {
         // !Usar el contexto del pipeline para ejecutar el comando sh
         scriptContext.sh '''
             cd resources/
+            pwd
+            ls -l
             ./create_repo.sh
         '''
     }

@@ -14,6 +14,7 @@ class RepositoryCreation {
             cd resources/
             pwd
             ls -l
+            cat repo_creation_20241213_133848.log
             ./create_repo.sh
         '''
     }

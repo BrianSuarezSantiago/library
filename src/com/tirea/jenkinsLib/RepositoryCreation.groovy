@@ -1,9 +1,16 @@
 package com.tirea.jenkinsLib
 
 class RepositoryCreation {
+    def scriptContext // ! pipeline context
+
+    //! Constructor que recibe el contexto del pipeline
+    RepositoryCreation(scriptContext) {
+        this.scriptContext = scriptContext
+    }
 
     def createRepository() {
-        sh '''
+        // !Usar el contexto del pipeline para ejecutar el comando sh
+        scriptContext.sh '''
             cd resources/
             ./create_repo.sh
         '''

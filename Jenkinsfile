@@ -7,7 +7,7 @@ pipeline {
         stage('Creation') {
             steps {
                 script {
-                    def repoAgent = new com.tirea.jenkinsLib.RepositoryCreation()
+                    def repoAgent = new com.tirea.jenkinsLib.RepositoryCreation(this) //! pipeline context
                     repoAgent.createRepository()
                 }
             }
